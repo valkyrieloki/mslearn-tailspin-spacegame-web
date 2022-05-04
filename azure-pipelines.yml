@@ -54,6 +54,10 @@ steps:
           arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
           zipAfterPublish: true
 
-    - task: PublishBuildArtifacts@1
+    - task: PublishPipelineArtifact@1
+      inputs:
+        TargetPath: '$(Pipeline.Workspace)'
+        artifactType: 'pipeline'
+        artifactName: 'drop'
       displayName: 'Publish Artifact: drop'
       condition: succeeded()
