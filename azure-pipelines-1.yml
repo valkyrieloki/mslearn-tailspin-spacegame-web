@@ -52,6 +52,8 @@ steps:
     parameters:
       buildConfiguration: "Release"
 
+  - task: WhiteSource@21
+      
   - task: PublishBuildArtifacts@1
     displayName: "Publish Artifact: drop"
     condition: succeeded()
