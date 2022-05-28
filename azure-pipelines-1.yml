@@ -51,8 +51,6 @@ steps:
   - template: templates/build-1.yaml
     parameters:
       buildConfiguration: "Release"
-
-  - task: WhiteSource@21
       
   - task: PublishBuildArtifacts@1
     displayName: "Publish Artifact: drop"
