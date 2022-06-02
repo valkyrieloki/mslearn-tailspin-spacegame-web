@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 #dotnet build pipeline
-=======
->>>>>>> 6c432a67c399dd211494d7e7e5f851539fffa916
 trigger:
     - '*'
 
 pool:
-<<<<<<< HEAD
     vmImage: ubuntu-20.04
-=======
-    vmImage: 'ubuntu-20.04'
->>>>>>> 6c432a67c399dd211494d7e7e5f851539fffa916
     demands:
         - npm
 
@@ -23,10 +16,7 @@ steps:
     - task: UseDotNet@2
       displayName: 'Use .NET SDK $(dotnetSdkVersion)'
       inputs:
-<<<<<<< HEAD
           packageType: sdk
-=======
->>>>>>> 6c432a67c399dd211494d7e7e5f851539fffa916
           version: '$(dotnetSdkVersion)'
 
     - task: Npm@1
